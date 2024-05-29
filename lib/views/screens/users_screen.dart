@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:products_categories_users/controllers/products_controller.dart';
-import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:products_categories_users/controllers/users_controller.dart';
 
 class UsersScreen extends StatelessWidget {
