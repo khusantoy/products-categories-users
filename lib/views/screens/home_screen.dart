@@ -34,30 +34,34 @@ class _HomeScreenState extends State<HomeScreen>
                 ? const Text("Products")
                 : const Text("Users"),
         centerTitle: true,
-        bottom: TabBar(controller: tabController, tabs: const [
-          Tab(
-            text: "Categories",
-            icon: Icon(Icons.category),
-          ),
-          Tab(
-            text: "Products",
-            icon: Icon(Icons.shopping_cart),
-          ),
-          Tab(
-            text: "Users",
-            icon: Icon(Icons.group),
-          )
-        ]),
+        bottom: TabBar(
+          indicatorColor: Colors.black,
+            labelColor: Colors.white,
+            controller: tabController,
+            tabs: const [
+              Tab(
+                text: "Categories",
+                icon: Icon(Icons.category),
+              ),
+              Tab(
+                text: "Products",
+                icon: Icon(Icons.shopping_cart),
+              ),
+              Tab(
+                text: "Users",
+                icon: Icon(Icons.group),
+              )
+            ]),
       ),
       body: Column(
         children: [
           Expanded(
             child: TabBarView(
               controller: tabController,
-              children: const [
+              children: [
                 CategoriesScreen(),
                 ProductsScreen(),
-                UserScreen(),
+                UsersScreen(),
               ],
             ),
           ),
